@@ -1,4 +1,4 @@
-function runMultiple() {
+function runMultipleLoTrinhHoc() {
   // Lấy bảng tính hiện tại
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = spreadsheet.getActiveSheet();
