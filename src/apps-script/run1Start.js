@@ -8,3 +8,4 @@ function runAll() {
   // Kích hoạt hàm runMultiple từ run1Start_prompt2.1_LoTrinhHoc3TinhHuongDau.js.js
   runMultipleLoTrinhHoc(); // Từ file run1Start_prompt2.1_LoTrinhHoc3TinhHuongDau.js.js
 }
+
