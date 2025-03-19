@@ -13,7 +13,7 @@ function onOpen(e) {
     try {
       var ui = SpreadsheetApp.getUi();
       
-      ui.createMenu('AI Tools')
+      ui.createMenu('AI Tools - Đoàn Ngọc Cường')
           .addItem('Run All Scripts', 'runAll')
           .addSeparator()
           .addSubMenu(ui.createMenu('Individual Scripts')
