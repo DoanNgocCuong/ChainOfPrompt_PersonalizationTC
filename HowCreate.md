@@ -121,6 +121,12 @@ clasp deploy -V <version-number>
 # Xem status của các file
 clasp status
 
+D:\GIT\ChainOfPrompt_PersonalizationTC\src> clasp status
+Tracked files:
+└─ apps-script\appsscript.json
+└─ apps-script\Mã.js
+Untracked files:
+
 # Xem log của project
 clasp logs
 ```
@@ -139,3 +145,10 @@ Một số lưu ý quan trọng:
 - Nên tạo version mới cho mỗi lần update quan trọng
 - Sử dụng `.claspignore` để loại trừ file không cần thiết
 - Kiểm tra log sau mỗi lần push/deploy để phát hiện lỗi
+
+
+# Add OPENAI_API_KEY to Google Apps Script
+
+- vÀO https://script.google.com/u/0/home/projects/1Kbf6Dxy1DLW2Cv0-lP-ha0XnOIBsk3mdvr2GHzqdESoochu8f4UnXxCI/settings
+- Tìm: Thuộc tính của tập lệnh
+Phần thuộc tính của tập lệnh giúp xác định và tiết lộ các thuộc tính tùy chỉnh của phiên bản đối tượng cụ thể một cách dễ dàng và hiệu quả. Tìm hiểu thêm trong tài liệu về thuộc tính của tập lệnh.
