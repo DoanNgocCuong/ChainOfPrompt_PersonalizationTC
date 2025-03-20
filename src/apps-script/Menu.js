@@ -17,7 +17,7 @@ function onOpen(e) {
           .addItem('Run All Scripts', 'runAll')
           .addSeparator()
           .addSubMenu(ui.createMenu('Individual Scripts')
-              .addItem('Run Bài Học Chunking', 'runMainBaiHocChunking')
+              .addItem('Gen Lộ Trình Học', 'runMainBaiHocChunking')
               .addItem('Run Milestones & Achievements', 'runMainMilestonesAchievements')
               .addItem('Run Lộ Trình Học (3 tình huống)', 'runMultipleLoTrinhHoc'))
           .addSeparator()

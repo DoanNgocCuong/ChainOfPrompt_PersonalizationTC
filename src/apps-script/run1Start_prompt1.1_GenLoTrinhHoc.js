@@ -1,4 +1,4 @@
-function runMainBaiHocChunking() {
+function runGenLoTrinhHoc() {
   // Lấy bảng tính hiện tại
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = spreadsheet.getActiveSheet();
@@ -7,11 +7,12 @@ function runMainBaiHocChunking() {
   var inputPrompt = sheet.getRange('A2').getValue();
   
   // Lấy prompt từ ô B2
-  var systemPrompt = sheet.getRange('B2').getValue();
+  var model = sheet.getRange('B2').getValue();
+  var systemPrompt = sheet.getRange('C2').getValue();
 
   // Kiểm tra xem inputPrompt và systemPrompt có rỗng không
-  if (!inputPrompt || !systemPrompt) {
-    Logger.log('Input prompt hoặc system prompt không được rỗng.');
+  if (!inputPrompt || !systemPrompt || !model) {
+    Logger.log('Input prompt, system prompt hoặc model không được rỗng.');
     return;
   }
 
@@ -19,7 +20,7 @@ function runMainBaiHocChunking() {
   var apiKey = CONFIG.API_KEY;
 
   // Gửi yêu cầu tới OpenAI và nhận phản hồi
-  var openAIResponse = getOpenAIResponse(systemPrompt, inputPrompt, apiKey);
+  var openAIResponse = getOpenAIResponse(systemPrompt, inputPrompt, apiKey, model);
   
   // Kiểm tra và tạo sheet "Responses" nếu không tồn tại
   var responseSheet = spreadsheet.getSheetByName('main');
@@ -28,5 +29,5 @@ function runMainBaiHocChunking() {
   }
 
   // Ghi phản hồi vào ô C2
-  writeResponseToSheet('main', 'C2', openAIResponse);
+  writeResponseToSheet('main', 'D2', openAIResponse);
 }
